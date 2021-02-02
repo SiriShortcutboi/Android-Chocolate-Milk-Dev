@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_messagereceiver_scene"
+    tools:context=".messagereceiver">
+
+    <TextView
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:text="Press the button to send another a message!" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/submit_bttn"
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:onClick="onResetMesssage"
+        android:text="reset message" />
+
+    public void onResetMesssage(View view) {
+    Intent intent2 = new Intent(this, MainActivity.class);
+    startActivity(intent2);
+
+</LinearLayout>
